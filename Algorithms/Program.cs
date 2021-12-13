@@ -1,25 +1,53 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-int[] tablica = new int[] { 20, 25, 10, 11, 2, 3, 9, 5, 6, 1 };
+int[] tablica = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-for (int i = 0; i < tablica.Length - 1; i++)
+int left = 0;
+int right = tablica.Length;
+int position = -11;
+string lol = "";
+while (left < right)
 {
-    for (int j = 1 + i; j < tablica.Length; j++)
+    int mid = (left + right) / 2;
+    if (tablica[mid] == position)
     {
-        if (tablica[i] > tablica[j])
-        {
-            int temp = tablica[i];
-            tablica[i] = tablica[j];
-            tablica[j] = temp;
-        }
+        lol = $"Pozycja {mid}";
+        break;
     }
+    else if (tablica[mid] > position)
+    {
+        right = mid;
+    }
+    else
+    {
+        left = mid + 1;
+    }
+    lol = $"Nie ma takiej liczby!";
+}
+Console.WriteLine(lol);
 
-}
-Console.WriteLine("==");
-foreach (var item in tablica)
-{
-    Console.WriteLine(item);
-}
+
+
+//int[] tablica = new int[] { 20, 25, 10, 11, 2, 3, 9, 5, 6, 1 };
+
+//for (int i = 0; i < tablica.Length - 1; i++)
+//{
+//    for (int j = 1 + i; j < tablica.Length; j++)
+//    {
+//        if (tablica[i] > tablica[j])
+//        {
+//            int temp = tablica[i];
+//            tablica[i] = tablica[j];
+//            tablica[j] = temp;
+//        }
+//    }
+
+//}
+//Console.WriteLine("==");
+//foreach (var item in tablica)
+//{
+//    Console.WriteLine(item);
+//}
 
 
 //for (int i = 1; i < 100; i++)
