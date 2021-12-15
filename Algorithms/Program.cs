@@ -2,29 +2,48 @@
 
 int[] tablica = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-int left = 0;
-int right = tablica.Length;
-int position = -11;
+
+int position = 10;
 string lol = "";
-while (left < right)
+for (int i = 0; i < tablica.Length; i++)
 {
-    int mid = (left + right) / 2;
-    if (tablica[mid] == position)
+    if (tablica[i] == position)
     {
-        lol = $"Pozycja {mid}";
+        lol = $"Pozycja {i}";
         break;
-    }
-    else if (tablica[mid] > position)
-    {
-        right = mid;
     }
     else
     {
-        left = mid + 1;
+        lol = $"Nie ma takiej liczby";
     }
-    lol = $"Nie ma takiej liczby!";
 }
 Console.WriteLine(lol);
+
+
+
+//int left = 0;
+//int right = tablica.Length;
+//int position = -11;
+//string lol = "";
+//while (left < right)
+//{
+//    int mid = (left + right) / 2;
+//    if (tablica[mid] == position)
+//    {
+//        lol = $"Pozycja {mid}";
+//        break;
+//    }
+//    else if (tablica[mid] > position)
+//    {
+//        right = mid;
+//    }
+//    else
+//    {
+//        left = mid + 1;
+//    }
+//    lol = $"Nie ma takiej liczby!";
+//}
+//Console.WriteLine(lol);
 
 
 
