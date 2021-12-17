@@ -3,21 +3,33 @@
 int[] tablica = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 
-int position = 10;
-string lol = "";
-for (int i = 0; i < tablica.Length; i++)
+int pierwszaLiczba = 0;
+int drugaLiczba = 1;
+int result = 0;
+
+for (int i = 2; i < 10; i++)
 {
-    if (tablica[i] == position)
-    {
-        lol = $"Pozycja {i}";
-        break;
-    }
-    else
-    {
-        lol = $"Nie ma takiej liczby";
-    }
+    result = pierwszaLiczba + drugaLiczba;
+    pierwszaLiczba = drugaLiczba;
+    drugaLiczba = result;
+    Console.WriteLine(result);
 }
-Console.WriteLine(lol);
+
+//int position = 10;
+//string lol = "";
+//for (int i = 0; i < tablica.Length; i++)
+//{
+//    if (tablica[i] == position)
+//    {
+//        lol = $"Pozycja {i}";
+//        break;
+//    }
+//    else
+//    {
+//        lol = $"Nie ma takiej liczby";
+//    }
+//}
+//Console.WriteLine(lol);
 
 
 
