@@ -3,17 +3,24 @@
 int[] tablica = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 
-int pierwszaLiczba = 0;
-int drugaLiczba = 1;
-int result = 0;
 
-for (int i = 2; i < 10; i++)
+for (int i = tablica.Length -1; i >= 0; i--)
 {
-    result = pierwszaLiczba + drugaLiczba;
-    pierwszaLiczba = drugaLiczba;
-    drugaLiczba = result;
-    Console.WriteLine(result);
+    Console.WriteLine(tablica[i]);
 }
+
+
+//int pierwszaLiczba = 0;
+//int drugaLiczba = 1;
+//int result = 0;
+
+//for (int i = 2; i < 10; i++)
+//{
+//    result = pierwszaLiczba + drugaLiczba;
+//    pierwszaLiczba = drugaLiczba;
+//    drugaLiczba = result;
+//    Console.WriteLine(result);
+//}
 
 //int position = 10;
 //string lol = "";
