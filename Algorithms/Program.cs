@@ -3,11 +3,28 @@
 int[] tablica = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 
+int max = tablica[0];
+int min = tablica[0];
 
-for (int i = tablica.Length -1; i >= 0; i--)
+foreach (var item in tablica)
 {
-    Console.WriteLine(tablica[i]);
+    if (item > max)
+    {
+        max = item;
+    }
+    if (item < min)
+    {
+        min = item;
+    }
 }
+Console.WriteLine(max);
+Console.WriteLine(min);
+
+
+//for (int i = tablica.Length -1; i >= 0; i--)
+//{
+//    Console.WriteLine(tablica[i]);
+//}
 
 
 //int pierwszaLiczba = 0;
