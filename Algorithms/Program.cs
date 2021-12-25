@@ -1,24 +1,44 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-int[] tablica = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
+int[] tablica = { 10, 1, 9, 2, 4, 3, 5, 6, 7, 8, 9 };
+List<int> numbersToSort = tablica.ToList();
 
-int max = tablica[0];
-int min = tablica[0];
+numbersToSort.Sort();
 
-foreach (var item in tablica)
+int[] sortedNumber = new int[tablica.Length];
+
+for (int i = tablica.Length - 1; i >= 0; i--)
 {
-    if (item > max)
-    {
-        max = item;
-    }
-    if (item < min)
-    {
-        min = item;
-    }
+    sortedNumber[tablica.Length - 1 - i] = numbersToSort[i];
 }
-Console.WriteLine(max);
-Console.WriteLine(min);
+foreach (var item in sortedNumber)
+{
+    Console.WriteLine(item);
+}
+
+Console.WriteLine("=");
+Console.WriteLine(string.Join(", " , sortedNumber));
+
+//int[] tablica = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+
+//int max = tablica[0];
+//int min = tablica[0];
+
+//foreach (var item in tablica)
+//{
+//    if (item > max)
+//    {
+//        max = item;
+//    }
+//    if (item < min)
+//    {
+//        min = item;
+//    }
+//}
+//Console.WriteLine(max);
+//Console.WriteLine(min);
 
 
 //for (int i = tablica.Length -1; i >= 0; i--)
