@@ -1,24 +1,34 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+int[] tablica = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-int[] tablica = { 10, 1, 9, 2, 4, 3, 5, 6, 7, 8, 9 };
-List<int> numbersToSort = tablica.ToList();
+var lol = tablica.Where(x => x > 5);
+Console.WriteLine(String.Join(", ", lol));
+Console.WriteLine("==");
+var lol1 = from lol2 in tablica
+           where lol2 > 5
+           select lol2;
+Console.WriteLine(String.Join(", ", lol1));
 
-numbersToSort.Sort();
 
-int[] sortedNumber = new int[tablica.Length];
+//int[] tablica = { 10, 1, 9, 2, 4, 3, 5, 6, 7, 8, 9 };
+//List<int> numbersToSort = tablica.ToList();
 
-for (int i = tablica.Length - 1; i >= 0; i--)
-{
-    sortedNumber[tablica.Length - 1 - i] = numbersToSort[i];
-}
-foreach (var item in sortedNumber)
-{
-    Console.WriteLine(item);
-}
+//numbersToSort.Sort();
 
-Console.WriteLine("=");
-Console.WriteLine(string.Join(", " , sortedNumber));
+//int[] sortedNumber = new int[tablica.Length];
+
+//for (int i = tablica.Length - 1; i >= 0; i--)
+//{
+//    sortedNumber[tablica.Length - 1 - i] = numbersToSort[i];
+//}
+//foreach (var item in sortedNumber)
+//{
+//    Console.WriteLine(item);
+//}
+
+//Console.WriteLine("=");
+//Console.WriteLine(string.Join(", " , sortedNumber));
 
 //int[] tablica = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
