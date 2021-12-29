@@ -1,14 +1,32 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-int[] tablica = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
-var lol = tablica.Where(x => x > 5);
-Console.WriteLine(String.Join(", ", lol));
-Console.WriteLine("==");
-var lol1 = from lol2 in tablica
-           where lol2 > 5
-           select lol2;
-Console.WriteLine(String.Join(", ", lol1));
+
+using Algorithms;
+
+var repository = new ProductRepository();
+
+try
+{
+var product = repository.FindProducts("aaaaaa").First();
+Console.WriteLine($"nazwa: {product.Name}, cena {product.Price}");
+
+}
+catch (InvalidOperationException)
+{
+
+    Console.WriteLine("Przepraszamy, podany produkt nie istnieje w bazie danych");
+}
+
+//int[] tablica = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+//var lol = tablica.Where(x => x > 5);
+//Console.WriteLine(String.Join(", ", lol));
+//Console.WriteLine("==");
+//var lol1 = from lol2 in tablica
+//           where lol2 > 5
+//           select lol2;
+//Console.WriteLine(String.Join(", ", lol1));
 
 
 //int[] tablica = { 10, 1, 9, 2, 4, 3, 5, 6, 7, 8, 9 };
