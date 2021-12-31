@@ -9,8 +9,10 @@ int[] tablica = new int[] { 10, 5, 1, 3, 4, 8, 9 };
 
 var sorted = tablica.OrderBy(x => x).Take(3);
 
-Console.WriteLine(String.Join(", ", sorted));
-
+foreach (var item in sorted)
+{
+    Console.WriteLine(item);
+}
 
 //var repository = new ProductRepository();
 
