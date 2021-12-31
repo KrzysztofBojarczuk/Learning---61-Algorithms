@@ -4,19 +4,27 @@
 
 using Algorithms;
 
-var repository = new ProductRepository();
 
-try
-{
-var product = repository.FindProducts("aaaaaa").First();
-Console.WriteLine($"nazwa: {product.Name}, cena {product.Price}");
+int[] tablica = new int[] { 10, 5, 1, 3, 4, 8, 9 };
 
-}
-catch (InvalidOperationException)
-{
+var sorted = tablica.OrderBy(x => x).Take(3);
 
-    Console.WriteLine("Przepraszamy, podany produkt nie istnieje w bazie danych");
-}
+Console.WriteLine(String.Join(", ", sorted));
+
+
+//var repository = new ProductRepository();
+
+//try
+//{
+//var product = repository.FindProducts("aaaaaa").First();
+//Console.WriteLine($"nazwa: {product.Name}, cena {product.Price}");
+
+//}
+//catch (InvalidOperationException)
+//{
+
+//    Console.WriteLine("Przepraszamy, podany produkt nie istnieje w bazie danych");
+//}
 
 //int[] tablica = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
